@@ -19,6 +19,7 @@ module Eopes3
       g.helper false
       g.test_framework :rspec, view_specs: false, helper_specs: false, fixture: false
       g.jbuilder false
+      g.migrate false
     end
   end
 end
