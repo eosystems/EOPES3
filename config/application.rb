@@ -13,6 +13,12 @@ module Eopes3
     # -- all .rb files in that directory are automatically loaded.
     config.browserify_rails.commandline_options = "-t babelify"
 
-
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.test_framework :rspec, view_specs: false, helper_specs: false, fixture: false
+      g.jbuilder false
+    end
   end
 end
