@@ -12,6 +12,20 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "estimates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT" do |t|
+    t.integer  "product_type_id"
+    t.decimal  "unit_sell_price", precision: 20, scale: 4
+    t.decimal  "sell_price",      precision: 20, scale: 4
+    t.decimal  "profit",          precision: 20, scale: 4
+    t.decimal  "cost",            precision: 20, scale: 4
+    t.integer  "amount"
+    t.decimal  "volume",          precision: 20, scale: 4
+    t.integer  "production_time"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT" do |t|
     t.string   "uid",                                                         null: false
     t.string   "provider",                             default: "eve_online", null: false

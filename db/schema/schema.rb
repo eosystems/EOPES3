@@ -4,6 +4,22 @@ create_table 'schema_migrations', collate: 'utf8_bin', comment: '' do |t|
   t.index 'version', name: 'unique_schema_migrations', unique: true
 end
 
+create_table "estimates", collate: "utf8_bin", comment: "" do |t|
+  t.int "id", primary_key: true, extra: "auto_increment"
+  t.int "product_type_id", null: true
+  t.decimal "unit_sell_price", null: true, precision: 20, scale: 4
+  t.decimal "sell_price", null: true, precision: 20, scale: 4
+  t.decimal "profit", null: true, precision: 20, scale: 4
+  t.decimal "cost", null: true, precision: 20, scale: 4
+  t.int "amount", null: true
+  t.decimal "volume", null: true, precision: 20, scale: 4
+  t.int "production_time", null: true
+  t.int "user_id", null: true
+  t.datetime "created_at", null: true
+  t.datetime "updated_at", null: true
+end
+
+
 create_table :users, collate: "utf8_bin" do |t|
   t.int :id, primary_key: true, extra: :auto_increment
   t.varchar :uid
