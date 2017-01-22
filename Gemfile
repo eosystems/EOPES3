@@ -18,6 +18,11 @@ gem 'kaminari'
 gem 'unicorn'
 gem 'activerecord-import'
 
+# React
+gem 'react-rails'
+gem 'js-routes'
+gem 'browserify-rails'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-doc'
