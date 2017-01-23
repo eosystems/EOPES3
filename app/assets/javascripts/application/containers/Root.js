@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux';
 import configureStore from '../store/configureStore';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
+import App from '../components/App';
 import estimateIndex from './estimate/estimateIndex';
 import EstimateProductEdit from './estimate/EstimateProductEdit';
 
@@ -15,7 +16,8 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <Router history={history}>
-          <Route path="/" component={estimateIndex}>
+          <Route path="/" component={App}>
+            <IndexRoute component={estimateIndex}></IndexRoute>
             <Route path="client/estimates/edit" component={EstimateProductEdit} />
           </Route>
         </Router>
