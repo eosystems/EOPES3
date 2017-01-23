@@ -1,19 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 
-class EstimateIndex extends Component {
+class EstimateProductEdit extends Component {
   render() {
     const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
     return (
       <p>
-        test
-        
+        materials
       </p>
     );
   }
 }
 
-EstimateIndex.propTypes = {
+EstimateProductEdit.propTypes = {
 
 };
 
-export default EstimateIndex;
+export default EstimateProductEdit;
