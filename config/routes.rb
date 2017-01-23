@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'estimates#index'
+  root to: 'clients#index'
 
-  get 'client/*path', to: 'estimates#index'
+  get 'client/*path', to: 'clients#index'
 
   resources :estimates
+  resources :clients
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
