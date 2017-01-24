@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import Manufacture from './Manufacture';
 
 class EstimateProductEdit extends Component {
     render() {
@@ -15,7 +16,7 @@ class EstimateProductEdit extends Component {
                 </div>
                 <Tabs>
                   <Tab label="Blueprint">
-                    <p>blueprint select</p>
+                    <Manufacture />
                   </Tab>
                   <Tab label="Material">
                     <p>material select</p>
