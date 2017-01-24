@@ -10,7 +10,8 @@ class EstimateProductEdit extends Component {
                     Product Estimate
                 </div>
                 <div className="estimate-summary">
-                  Profit 100,000 isk (82.2%)
+                  Product: Vengence <br/>
+                  Profit: 100,000 isk (82.2%)
                 </div>
                 <Tabs>
                   <Tab label="Blueprint">
