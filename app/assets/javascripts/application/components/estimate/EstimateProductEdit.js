@@ -7,6 +7,20 @@ class EstimateProductEdit extends Component {
       ;
     }
 
+    constructor(props) {
+      super(props);
+      this.state = {
+        tabValue: 'manufacturing'
+      };
+    }
+
+    handleChange(value){
+      this.setState({
+        tabValue: value,
+      });
+      console.log(value);
+    };
+
     render() {
         const {te, me, price} = this.props;
         return (
@@ -18,15 +32,14 @@ class EstimateProductEdit extends Component {
                   Product: Vengence <br/>
                   Profit: 100,000 isk (82.2%)
                 </div>
-                <Tabs>
-                  <Tab label="Manufacturing">
+                <Tabs value={this.state.tabValue} onChange={this.tabChange}>
+                  <Tab label="Manufacturing" value='manufacturing'>
                     <Manufacture>{this.props}</Manufacture>
                   </Tab>
-                  <Tab label="Material">
+                  <Tab label="Material" value='material'>
                     <p>material select</p>
                   </Tab>
                 </Tabs>
-                <p>price: {price}</p>
             </div>
         );
     }

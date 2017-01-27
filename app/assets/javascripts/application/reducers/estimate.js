@@ -8,7 +8,7 @@ const initialState =
   },
   character: {
     industry: 5,
-    adavancedIndustry: 5
+    advancedIndustry: 5
   },
   installation: {
     solarSystem: '',
