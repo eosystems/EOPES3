@@ -1,3 +1,5 @@
+import {TAB_CHANGE} from '../actions/estimateProductEdit';
+
 const initialState =
 {
   blueprint: {
@@ -14,7 +16,8 @@ const initialState =
     solarSystem: '',
     manufacturing: 'Station',
     tax: '10.0'
-  }
+  },
+  tabValue: 'manufacturing'
 }
 
 export default function estimate(state = initialState, action) {
@@ -22,6 +25,8 @@ export default function estimate(state = initialState, action) {
   switch (action.type) {
     case 'ACTION_INCREMENT_PRICE':
       return {price: price + action.price}
+    case 'TAB_CHANGE':
+      return action;
   default:
     return state;
   }
