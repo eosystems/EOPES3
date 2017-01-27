@@ -1,14 +1,12 @@
 import React, {Component, PropTypes} from 'react';
-import {Field, Form, actions} from 'react-redux-form';
 
 class Manufacture extends React.Component {
 
     render() {
-        let {blueprintForm} = this.props.children;
+        let {estimate} = this.props.children;
         return (
             <div>
                 Manufacturing time: 10M 12S<br/>
-
             </div>
         );
     }
