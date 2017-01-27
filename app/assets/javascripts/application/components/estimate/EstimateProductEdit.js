@@ -19,7 +19,7 @@ class EstimateProductEdit extends Component {
                   Profit: 100,000 isk (82.2%)
                 </div>
                 <Tabs>
-                  <Tab label="Blueprint">
+                  <Tab label="Manufacturing">
                     <Manufacture>{this.props}</Manufacture>
                   </Tab>
                   <Tab label="Material">
@@ -33,7 +33,6 @@ class EstimateProductEdit extends Component {
 }
 
 EstimateProductEdit.propTypes = {
-  price: PropTypes.number.isRequired
 };
 
 export default EstimateProductEdit;

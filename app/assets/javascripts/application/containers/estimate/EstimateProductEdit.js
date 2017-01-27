@@ -5,7 +5,9 @@ import * as ProductEditActions from '../../actions/estimateProductEdit';
 
 function mapStateToProps(state) {
   return {
-    price: state.estimate.price
+    blueprint: state.estimate.blueprint,
+    character: state.estimate.character,
+    installation: state.estimate.installation
   }
 }
 
