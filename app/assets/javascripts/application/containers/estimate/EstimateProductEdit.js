@@ -8,7 +8,8 @@ function mapStateToProps(state) {
     blueprint: state.estimate.blueprint,
     character: state.estimate.character,
     installation: state.estimate.installation,
-    tabValue: state.estimate.tabValue
+    tabValue: state.estimate.tabValue,
+    materials: state.estimate.materials
   }
 }
 

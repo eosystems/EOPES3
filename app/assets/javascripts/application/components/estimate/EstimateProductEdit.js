@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Manufacture from './Manufacture';
-import Material from './Material';
+import Materials from './Materials';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 class EstimateProductEdit extends Component {
@@ -30,7 +30,7 @@ class EstimateProductEdit extends Component {
                     <Manufacture>{this.props}</Manufacture>
                   </Tab>
                   <Tab label="Material" value='material'>
-                    <Material>{this.props}</Material>
+                    <Materials data={this.props.materials}></Materials>
                   </Tab>
                 </Tabs>
             </div>

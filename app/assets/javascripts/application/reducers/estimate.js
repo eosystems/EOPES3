@@ -1,6 +1,23 @@
-import {
-    TAB_CHANGE
-} from '../actions/estimateProductEdit';
+import {TAB_CHANGE} from '../actions/estimateProductEdit';
+
+const initMaterial = {
+  key: 1,
+  typeId: 34,
+  typeName: 'Tritanium',
+  require: 100,
+  price: 4.00,
+  volume: 6.76,
+  totalPrice: 676.0
+}
+const initMaterial2 = {
+  key: 2,
+  typeId: 35,
+  typeName: 'Pyerite',
+  require: 100,
+  price: 4.00,
+  volume: 6.76,
+  totalPrice: 676.0
+}
 
 const initialState = {
     blueprint: {
@@ -18,6 +35,9 @@ const initialState = {
         manufacturing: 'Station',
         tax: '10.0'
     },
+    materials: [
+      initMaterial,initMaterial2
+    ],
     tabValue: 'manufacturing'
 }
 
@@ -29,9 +49,7 @@ export default function estimate(state = initialState, action) {
                 price: price + action.price
             }
         case 'TAB_CHANGE':
-            return Object.assign({}, state,{
-              tabValue: action.tabChange
-            })
+            return Object.assign({}, state, {tabValue: action.tabChange})
         default:
             return state;
     }

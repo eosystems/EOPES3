@@ -4,7 +4,7 @@ class Material extends React.Component {
     render() {
         return (
             <div>
-                <p>aaaaa</p>
+                <p>aaaaa</p><br/>
             </div>
         );
     }
