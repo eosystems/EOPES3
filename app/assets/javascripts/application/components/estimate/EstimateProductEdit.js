@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Manufacture from './Manufacture';
+import {Field, Form, actions} from 'react-redux-form';
 
 class EstimateProductEdit extends Component {
     render() {
@@ -16,12 +17,14 @@ class EstimateProductEdit extends Component {
                 </div>
                 <Tabs>
                   <Tab label="Blueprint">
-                    <Manufacture />
+                    <Manufacture>{this.props}</Manufacture>
                   </Tab>
                   <Tab label="Material">
                     <p>material select</p>
                   </Tab>
                 </Tabs>
+
+
             </div>
         );
     }

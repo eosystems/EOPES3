@@ -3,9 +3,15 @@ import { connect } from 'react-redux';
 import EstimateProductEdit from '../../components/estimate/EstimateProductEdit';
 import * as ProductEditActions from '../../actions/estimateProductEdit';
 
+const initialBlueprint = {
+  te: '20',
+  me: '10'
+};
+
 function mapStateToProps(state) {
   return {
-    materials: state.materials
+    materials: state.materials,
+    blueprintForm: state.blueprintForm
   }
 }
 
