@@ -4,8 +4,12 @@ import Manufacture from './Manufacture';
 import {Field, Form, actions} from 'react-redux-form';
 
 class EstimateProductEdit extends Component {
+    componentWillMount() {
+      ;
+    }
+
     render() {
-        const {increment, incrementIfOdd, incrementAsync, decrement, counter} = this.props;
+        const {te, me, price} = this.props;
         return (
             <div>
                 <div className="title">
@@ -23,13 +27,14 @@ class EstimateProductEdit extends Component {
                     <p>material select</p>
                   </Tab>
                 </Tabs>
-
-
+                <p>price: {price}</p>
             </div>
         );
     }
 }
 
-EstimateProductEdit.propTypes = {};
+EstimateProductEdit.propTypes = {
+  price: PropTypes.number.isRequired
+};
 
 export default EstimateProductEdit;

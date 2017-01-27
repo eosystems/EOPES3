@@ -9,6 +9,8 @@ import estimateIndex from './estimate/estimateIndex';
 import EstimateProductEdit from './estimate/EstimateProductEdit';
 
 const store = configureStore();
+console.log(store.getState());
+
 const history = syncHistoryWithStore(browserHistory, store);
 
 export default class Root extends Component {

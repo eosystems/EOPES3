@@ -1,0 +1,4 @@
+const ACTION_INCREMENT_PRICE = {
+  type: 'ACTION_INCREMENT_PRICE',
+  count: 1
+}
