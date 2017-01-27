@@ -1,6 +1,7 @@
 const initialState =
 {
   blueprint: {
+    bpc: '',
     te: 10,
     me: 20,
     runs: 1
