@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import TextField from 'material-ui/TextField';
 
 class Manufacture extends React.Component {
 
@@ -6,13 +7,14 @@ class Manufacture extends React.Component {
         let {blueprint} = this.props.children;
         return (
             <div>
-                Manufacturing time: 10M 12S<br/>
-              {blueprint.te}
+                <div className="sub-title">Blueprint</div><br/>
+                <TextField name="te" value={blueprint.te} floatingLabelText="TE" />
+                <TextField name="me" value={blueprint.me} floatingLabelText="ME" />
+                <TextField name="runs" value={blueprint.runs} floatingLabelText="RUNS"/>
             </div>
         );
     }
 }
-
 
 Manufacture.propTypes = {};
 

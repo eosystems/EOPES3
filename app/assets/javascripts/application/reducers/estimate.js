@@ -3,7 +3,7 @@ const initialState =
   blueprint: {
     te: 10,
     me: 20,
-    run: 1
+    runs: 1
   },
   character: {
     industry: 5,
