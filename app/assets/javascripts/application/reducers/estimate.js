@@ -3,8 +3,8 @@ import {TAB_CHANGE} from '../actions/estimateProductEdit';
 const initMaterial = {
   key: 1,
   typeId: 34,
-  typeName: 'Tritanium',
-  require: 100,
+  typeName: 'Tritanium Test Material',
+  require: 100000,
   price: 4.00,
   volume: 6.76,
   totalPrice: 676.0
