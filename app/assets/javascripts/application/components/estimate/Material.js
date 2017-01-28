@@ -10,6 +10,10 @@ const style = {
   width: 150
 };
 
+const shortTextStyle = {
+  width: 150
+}
+
 class Material extends React.Component {
     render() {
         let {
@@ -19,18 +23,22 @@ class Material extends React.Component {
             require,
             price,
             volume,
-            totalPrice
+            totalPrice,
+            orderType,
+            orderSolarSystem
         } = this.props.data;
         let imgSrc = "https://image.eveonline.com/Type/" + typeId + "_32.png";
         return (
             <div>
 
-                <Paper style={style} zDepth={0} rouded={false}>
+                <Paper style={style} zDepth={0}>
                     <img src={imgSrc}></img><br/>
                     {typeName} x {require}
                 </Paper>
-                <TextField name="volume" value={volume} floatingLabelText="Volume"/>
-                <TextField name="price" defaultValue={price} floatingLabelText="Price"/>
+                <TextField style={shortTextStyle} name="volume" value={volume} floatingLabelText="Total Volume"/>
+                <TextField style={shortTextStyle} name="price" defaultValue={price} floatingLabelText="Unit Price"/>
+                <TextField name="totalPrice" value={totalPrice} floatingLabelText="Total Price"/>
+                <span className="estimate-text">{orderType} : {orderSolarSystem}</span>
             </div>
         );
     }

@@ -7,7 +7,11 @@ const initMaterial = {
   require: 100000,
   price: 4.00,
   volume: 6.76,
-  totalPrice: 676.0
+  totalPrice: 676.0,
+  orderSolarSystem: 'Jita',
+  orderType: 'Sell Orders',
+  brokerFee: '3',
+  transactionTax: '1'
 }
 const initMaterial2 = {
   key: 2,
@@ -16,7 +20,11 @@ const initMaterial2 = {
   require: 100,
   price: 4.00,
   volume: 6.76,
-  totalPrice: 676.0
+  totalPrice: 676.0,
+  orderSolarSystem: 'Jita',
+  orderType: 'Sell Orders',
+  brokerFee: '3',
+  transactionTax: '1'
 }
 
 const initialState = {
