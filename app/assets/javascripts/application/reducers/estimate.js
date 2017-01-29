@@ -12,7 +12,9 @@ const initMaterial = {
   orderSolarSystem: 'Jita',
   orderType: 'Sell Orders',
   brokerFee: '3',
-  transactionTax: '1'
+  transactionTax: '1',
+  baseQuantity: 10,
+  adjustedPrice: 3.9
 }
 const initMaterial2 = {
   key: 2,
@@ -25,7 +27,9 @@ const initMaterial2 = {
   orderSolarSystem: 'Jita',
   orderType: 'Sell Orders',
   brokerFee: '3',
-  transactionTax: '1'
+  transactionTax: '1',
+  baseQuantity: 10,
+  adjustedPrice: 3.9
 }
 const initProduct = {
   key: 1,
@@ -38,7 +42,9 @@ const initProduct = {
   orderSolarSystem: 'Jita',
   orderType: 'Sell Orders',
   brokerFee: '3',
-  transactionTax: '1'
+  transactionTax: '1',
+  baseQuantity: 10,
+  adjustedPrice: 3.9
 }
 
 const initialState = {
