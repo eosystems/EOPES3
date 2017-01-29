@@ -1,4 +1,4 @@
-import {TAB_CHANGE} from '../actions/estimateProductEdit';
+import {TAB_CHANGE, HANDLE_FAVORITE_ESTIMATE} from '../actions/estimateProductEdit';
 
 const initMaterial = {
   key: 1,
@@ -46,7 +46,8 @@ const initialState = {
     materials: [
       initMaterial,initMaterial2
     ],
-    tabValue: 'manufacturing'
+    tabValue: 'manufacturing',
+    handleFavoriteEstimateValue: false
 }
 
 export default function estimate(state = initialState, action) {
@@ -58,6 +59,8 @@ export default function estimate(state = initialState, action) {
             }
         case 'TAB_CHANGE':
             return Object.assign({}, state, {tabValue: action.tabChange})
+        case 'HANDLE_FAVORITE_ESTIMATE':
+            return Object.assign({}, state, {handleFavoriteEstimateValue: !state.handleFavoriteEstimateValue})
         default:
             return state;
     }

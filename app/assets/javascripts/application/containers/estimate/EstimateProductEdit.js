@@ -9,6 +9,7 @@ function mapStateToProps(state) {
     character: state.estimate.character,
     installation: state.estimate.installation,
     tabValue: state.estimate.tabValue,
+    handleFavoriteEstimateValue: state.estimate.handleFavoriteEstimateValue,
     materials: state.estimate.materials
   }
 }

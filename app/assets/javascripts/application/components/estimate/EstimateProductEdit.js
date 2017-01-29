@@ -3,23 +3,34 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import Manufacture from './Manufacture';
 import Materials from './Materials';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import FlatButton from 'material-ui/FlatButton';
+import Drawer from 'material-ui/Drawer';
+
+const rightStyle = {
+  float: 'right'
+};
 
 class EstimateProductEdit extends Component {
     componentWillMount() {
       ;
-    }
+    };
 
     constructor(props) {
       injectTapEventPlugin();
       super(props);
-    }
+    };
 
     render() {
-        const {tabValue, tabChange} = this.props;
+        const {tabValue, tabChange, handleFavoriteEstimate, handleFavoriteEstimateValue} = this.props;
+
         return (
             <div>
                 <div className="title">
                     Product Estimate
+                    <FlatButton label="Save" style={rightStyle} primary={true}/>
+                    <FlatButton label="Cancel" style={rightStyle} />
+                    <FlatButton label="ADD Favorite" style={rightStyle}/>
+                    <FlatButton label="Show Favorite" style={rightStyle} onTouchTap={handleFavoriteEstimate} />
                 </div>
                 <div className="estimate-summary">
                   Product: Vengence <br/>
@@ -33,6 +44,11 @@ class EstimateProductEdit extends Component {
                     <Materials data={this.props.materials}></Materials>
                   </Tab>
                 </Tabs>
+                <Drawer width={200} openSecondary={true} open={handleFavoriteEstimateValue} >
+                    <h3>Favorite Estimate</h3><br/>
+                    <li>Vengence</li>
+                    <li>Vexor</li>
+                </Drawer>
             </div>
         );
     }
