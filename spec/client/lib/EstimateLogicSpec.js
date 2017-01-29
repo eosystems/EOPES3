@@ -3,10 +3,22 @@ import assert from 'power-assert';
 
 describe('Estimate', function() {
   describe('requireMaterial', function() {
-    it('テスト', function() {
-      let logic = new EstimateLogic();
-      let result = logic.requireMaterial(1,1,1);
-      assert.equal(1, result);
+    var logic = new EstimateLogic();
+
+    it('runs:2,baseQuantity:101,ME:0 の場合 202', function() {
+      let result = logic.requireMaterial(2,101,0);
+      assert.equal(202, result);
     });
+
+    it('runs:2,baseQuantity:101,ME:10 の場合 182', function() {
+      let result = logic.requireMaterial(2,101,10);
+      assert.equal(182, result);
+    });
+
+    it('runs > 計算結果 の場合 runs', function() {
+      let result = logic.requireMaterial(10,1,10);
+      assert.equal(10, result);
+    });
+
   });
 });
