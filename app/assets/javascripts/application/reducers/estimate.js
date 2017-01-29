@@ -58,7 +58,7 @@ export default function estimate(state = initialState, action) {
                 price: price + action.price
             }
         case 'TAB_CHANGE':
-            return Object.assign({}, state, {tabValue: action.tabChange})
+            return Object.assign({}, state, {tabValue: action.tabValue})
         case 'HANDLE_FAVORITE_ESTIMATE':
             return Object.assign({}, state, {handleFavoriteEstimateValue: !state.handleFavoriteEstimateValue})
         default:
