@@ -1,10 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import Manufacture from './Manufacture';
-import Materials from './Materials';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import FlatButton from 'material-ui/FlatButton';
 import Drawer from 'material-ui/Drawer';
+import Manufacture from './Manufacture';
+import Materials from './Materials';
+import EstimateResult from './EstimateResult';
 
 const rightStyle = {
   float: 'right'
@@ -42,6 +43,9 @@ class EstimateProductEdit extends Component {
                   </Tab>
                   <Tab label="Material" value='material'>
                     <Materials data={this.props.materials}></Materials>
+                  </Tab>
+                  <Tab label="Result" value='result'>
+                    <EstimateResult data={this.props} />
                   </Tab>
                 </Tabs>
                 <Drawer width={200} openSecondary={true} open={handleFavoriteEstimateValue} >

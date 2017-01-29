@@ -26,6 +26,19 @@ const initMaterial2 = {
   brokerFee: '3',
   transactionTax: '1'
 }
+const initProduct = {
+  key: 1,
+  typeId: 35,
+  typeName: 'Vengeance',
+  require: 100,
+  price: 4.00,
+  volume: 6.76,
+  totalPrice: 676.0,
+  orderSolarSystem: 'Jita',
+  orderType: 'Sell Orders',
+  brokerFee: '3',
+  transactionTax: '1'
+}
 
 const initialState = {
     blueprint: {
@@ -45,6 +58,9 @@ const initialState = {
     },
     materials: [
       initMaterial,initMaterial2
+    ],
+    product: [
+      initProduct
     ],
     tabValue: 'manufacturing',
     handleFavoriteEstimateValue: false

@@ -10,7 +10,8 @@ function mapStateToProps(state) {
     installation: state.estimate.installation,
     tabValue: state.estimate.tabValue,
     handleFavoriteEstimateValue: state.estimate.handleFavoriteEstimateValue,
-    materials: state.estimate.materials
+    materials: state.estimate.materials,
+    product: state.estimate.product
   }
 }
 
