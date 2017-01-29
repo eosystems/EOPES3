@@ -1,4 +1,5 @@
 import {TAB_CHANGE, HANDLE_FAVORITE_ESTIMATE} from '../actions/estimateProductEdit';
+import EstimateLogic from '../lib/EstimateLogic';
 
 const initMaterial = {
   key: 1,
