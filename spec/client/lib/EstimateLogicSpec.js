@@ -1,8 +1,12 @@
 var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1,2,3].indexOf(4));
+let EsimateLogic = require('../../../app/assets/javascripts/application/lib/EstimateLogic.js');
+
+describe('Estimate', function() {
+  describe('requireMaterial', function() {
+    it('require material logic', function() {
+      let logic = new EstimateLogic();
+      let result = logic.requireMaterial(1,1,1)
+      assert.equal(-1, result);
     });
   });
 });
