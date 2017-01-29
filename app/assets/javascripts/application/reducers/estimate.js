@@ -63,6 +63,7 @@ const initialState = {
       initProduct
     ],
     result: {
+        totalSellPrice: 10000,
         profit: 100000,
         productionTime: 10,
         totalCost: 20000,
@@ -70,7 +71,7 @@ const initialState = {
         baseJobCost: 10,
         jobFee: 20,
         FacilityCost: 30,
-        totalMaterialCostCost: 1200
+        totalMaterialCost: 1200
     },
     tabValue: 'manufacturing',
     handleFavoriteEstimateValue: false

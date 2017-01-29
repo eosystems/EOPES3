@@ -12,14 +12,21 @@ import {
 } from 'material-ui/Table';
 
 const noHeightStyle = {
-  height: 0
+    height: 0
 };
 
 class EstimateResult extends React.Component {
     render() {
         let product = this.props.data.product;
         let estimateResult = this.props.data.result;
-
+        let {
+            totalSellPrice,
+            profit,
+            productionTime,
+            totalCost,
+            jobInstallCost,
+            totalMaterialCost
+        } = this.props.data.result;
         return (
             <div>
                 <Materials data={product}></Materials>
@@ -27,12 +34,18 @@ class EstimateResult extends React.Component {
                 <Table selectable={false}>
                     <TableBody displayRowCheckbox={false}>
                         <TableRow>
-                            <TableRowColumn style={{width: 150}}>
+                            <TableRowColumn style={{
+                                width: 150
+                            }}>
                                 Total Sell Price
                             </TableRowColumn>
-                            <TableRowColumn style={{width: 150}}></TableRowColumn>
-                            <TableRowColumn style={{width: 150}}>
-                                10000
+                            <TableRowColumn style={{
+                                width: 150
+                            }}></TableRowColumn>
+                            <TableRowColumn style={{
+                                width: 150
+                            }}>
+                                {totalSellPrice}
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                         </TableRow>
@@ -42,7 +55,7 @@ class EstimateResult extends React.Component {
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                             <TableRowColumn>
-                                10000
+                                {totalCost}
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                         </TableRow>
@@ -52,7 +65,7 @@ class EstimateResult extends React.Component {
                                 Job Install Cost
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
-                            <TableRowColumn>1000</TableRowColumn>
+                            <TableRowColumn>{jobInstallCost}</TableRowColumn>
                         </TableRow>
                         <TableRow>
                             <TableRowColumn></TableRowColumn>
@@ -60,7 +73,7 @@ class EstimateResult extends React.Component {
                                 Total Material Cost
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
-                            <TableRowColumn>1000</TableRowColumn>
+                            <TableRowColumn>{totalMaterialCost}</TableRowColumn>
                         </TableRow>
                         <TableRow>
                             <TableRowColumn>
@@ -68,7 +81,7 @@ class EstimateResult extends React.Component {
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                             <TableRowColumn>
-                                10000
+                                {profit}
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                         </TableRow>
@@ -78,7 +91,7 @@ class EstimateResult extends React.Component {
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                             <TableRowColumn>
-                                10000
+                                {productionTime}
                             </TableRowColumn>
                             <TableRowColumn></TableRowColumn>
                         </TableRow>
