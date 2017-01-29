@@ -5,8 +5,6 @@ export default class EstimateLogic{
     if (result < runs){
       return runs;
     }
-    console.log("test------");
-    console.log(result);
     return result;
   }
 }
