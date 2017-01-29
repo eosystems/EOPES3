@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import Material from './Material';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Materials extends React.Component {
     render() {
@@ -9,7 +10,12 @@ class Materials extends React.Component {
         });
 
         return (
-            <div>{materialsNode}</div>
+            <div>
+              <div>
+                <RaisedButton label="Set Jita Sell Order Price" secondary={true}/>
+              </div>
+              {materialsNode}
+            </div>
         );
     }
 }
